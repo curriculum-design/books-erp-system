@@ -32,7 +32,14 @@
 > 表结构设计
 
 1. 图书类型表 base_book_type
+```sql
+id primary key autoincrement 类型id 
+name 类型名称
+create_user 创建人
+create_update 创建时间
+```
 2. 出版社表 base_publisher
+
 3. 图书表 base_book
 4. 仓库信息表 base_storage
 5. 进货订单 erp_purchase, erp_purchase_item

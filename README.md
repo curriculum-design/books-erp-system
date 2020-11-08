@@ -125,6 +125,24 @@ outbound_time 出库时间
 status 状态（10: 进货  20: 入库   30: 出库）
 create_user 创建人
 create_update 创建时间
-```
 
+```
+9. 供应商信息
+```sql
+id primary key autoincrement id 
+name 供应商名称
+contact_name 联系人名称
+contact_mobile 联系人手机号
+create_user 创建人
+create_update 创建时间
+```
+10. 客户信息
+```sql
+id primary key autoincrement id 
+name 客户名称
+contact_name 联系人名称
+contact_mobile 联系人手机号
+create_user 创建人
+create_update 创建时间
+```
 >  数据库相关表之间的完整性约束

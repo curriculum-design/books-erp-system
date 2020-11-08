@@ -30,6 +30,7 @@
 4. 要求一单可以处理多种图书（比如销售设置销售单及其明细二张表）；
 
 > 表结构设计
+
 图书类型表 base_book_type
 出版社表 base_publisher
 图书表 base_book

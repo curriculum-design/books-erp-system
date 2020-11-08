@@ -31,13 +31,13 @@
 
 > 表结构设计
 
-图书类型表 base_book_type
-出版社表 base_publisher
-图书表 base_book
-仓库信息表 base_storage
-进货订单 erp_purchase, erp_purchase_item
-入库订单 erp_godown_entry, erp_godown_entry_item
-出库订单 erp_outbound, erp_outbound_item
-图书订单表 erp_book_order
+1. 图书类型表 base_book_type
+2. 出版社表 base_publisher
+3. 图书表 base_book
+4. 仓库信息表 base_storage
+5. 进货订单 erp_purchase, erp_purchase_item
+6. 入库订单 erp_godown_entry, erp_godown_entry_item
+7. 出库订单 erp_outbound, erp_outbound_item
+8. 图书订单表 erp_book_order
 
 >  数据库相关表之间的完整性约束

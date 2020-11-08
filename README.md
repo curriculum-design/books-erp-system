@@ -24,7 +24,7 @@
 
 三、 数据库
 
-> 课设对数据库的强约束
+> 对数据库的强约束
 
 1. 创建存储过程查询某段时间内各种图书的进货和销售情况
 2. 创建视图查询各类图书的库存总数
@@ -94,7 +94,7 @@ create_update 创建时间
 
 table erp_godown_entry_item 入库单明细
 id primary key autoincrement id 
-order_id foreign key 入库单IDi
+order_id foreign key 入库单ID
 book_id 图书id
 quantity 数量
 ```

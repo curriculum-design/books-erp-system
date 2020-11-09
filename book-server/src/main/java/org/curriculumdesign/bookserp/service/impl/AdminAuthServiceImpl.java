@@ -24,6 +24,7 @@ public class AdminAuthServiceImpl implements UserDetailsService {
         UserAccountDTO userAccountDTO = new UserAccountDTO();
         userAccountDTO.setUsername(admin.getUsername());
         userAccountDTO.setId(admin.getId());
+        userAccountDTO.setStatus(admin.getStatus());
         userAccountDTO.setPassword(admin.getPassword());
         userAccountDTO.setCredentialsSalt(admin.getUsername());
         return userAccountDTO;

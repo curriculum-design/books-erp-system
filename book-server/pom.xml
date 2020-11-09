@@ -38,10 +38,6 @@
         </dependency>
         <dependency>
             <groupId>com.vanrui.spring.starter</groupId>
-            <artifactId>vanrui-spring-boot-starter-mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vanrui.spring.starter</groupId>
             <artifactId>vanrui-spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>

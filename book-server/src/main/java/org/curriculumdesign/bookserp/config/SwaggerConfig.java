@@ -6,19 +6,21 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.ParameterBuilder;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.builders.*;
 import springfox.documentation.schema.ModelRef;
+import springfox.documentation.schema.ModelSpecification;
+import springfox.documentation.schema.ScalarType;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Parameter;
+import springfox.documentation.service.ParameterType;
+import springfox.documentation.service.RequestParameter;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.ServletContext;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -35,13 +37,19 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api(ServletContext servletContext) {
-//
-//        List<Parameter> parameters = ImmutableList.of(
-//                new ParameterBuilder().parameterType("header").name("x-token").required(true).description("X-TOKEN")
-//                        .modelRef(new ModelRef("string")).required(false).build()
-//        );
+        List<RequestParameter> parameters = new ArrayList<>();
+
+        parameters.add(new RequestParameterBuilder()
+                .name("x-token")
+                .description("请求TOKEN")
+                .required(Boolean.FALSE)
+                .in(ParameterType.HEADER)
+                .query(q -> q.model(m -> m.scalarModel(ScalarType.STRING)))
+                .required(Boolean.FALSE)
+                .build());
+
         return new Docket(DocumentationType.SWAGGER_2)
-//                .globalOperationParameters(parameters)
+                .globalRequestParameters(parameters)
                 .directModelSubstitute(Timestamp.class, Long.class)
                 .directModelSubstitute(Date.class, Long.class)
                 .select()

@@ -127,7 +127,7 @@ create_user 创建人
 create_update 创建时间
 
 ```
-9. 供应商信息
+9. 供应商信息 base_supplier
 ```sql
 id primary key autoincrement id 
 name 供应商名称
@@ -136,7 +136,7 @@ contact_mobile 联系人手机号
 create_user 创建人
 create_update 创建时间
 ```
-10. 客户信息
+10. 客户信息 base_client
 ```sql
 id primary key autoincrement id 
 name 客户名称

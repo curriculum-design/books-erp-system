@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @EnableScheduling
 @EnableFeignClients
 @SpringBootApplication
-@MapperScan(basePackages = {"org.curriculumdesign.bookserp.mapper"}, annotationClass = Repository.class)
+@MapperScan(basePackages = {"org.curriculumdesign.bookserp.mapper", "org.curriculumdesign.bookserp.*.mapper"}, annotationClass = Repository.class)
 @EnableVanruiWeb(basePackages = {"org.curriculumdesign.bookserp.*"})
 public class BooksErpApplication {
 

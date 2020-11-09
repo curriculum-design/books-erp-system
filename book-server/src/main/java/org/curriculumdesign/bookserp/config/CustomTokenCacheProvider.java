@@ -14,7 +14,7 @@ public class CustomTokenCacheProvider implements TokenCacheProvider {
 
     @Override
     public void tokenCreate(String key, String value, long tokenValidityInSeconds) {
-        Cache cache = cacheManager.getCache(cacheName + "#" + tokenValidityInSeconds);
+        Cache cache = cacheManager.getCache(cacheName);
         cache.put(key, value);
     }
 

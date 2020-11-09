@@ -3,7 +3,7 @@ server.port: 18200
 
 logging:
   level.org.curriculumdesign.bookserp: DEBUG
-
+swagger.enable: true
 mybatis-plus:
   mapper-locations: mybatis/**Mapper.xml
   configuration:

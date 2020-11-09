@@ -8,6 +8,7 @@ spring:
     url: jdbc:mysql://47.106.129.111:3306/books?useOldAliasMetadataBehavior=true&useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: ue88824568==321
+    driver-class-name: com.mysql.jdbc.Driver
 
 vanrui.web:
   base-packages: org.curriculumdesign.bookserp  #  验证码
@@ -23,7 +24,7 @@ vanrui.web:
     # 内容长度
     length: 2
   security:
-    ignore-urls: /swagger-resources/configuration/ui,/swagger-resources,/v2/api-docs,/swagger-ui.html,/actuator/health,/druid/**
+    ignore-urls: /swagger-resources/configuration/ui,/swagger-resources,/v2/api-docs,/swagger-ui/,/actuator/health,/druid/**
     # 账号单用户 登录
     single-login: false
     header: x-token

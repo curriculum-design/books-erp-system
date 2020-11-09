@@ -48,6 +48,10 @@
             <groupId>com.vanrui.spring.starter</groupId>
             <artifactId>vanrui-spring-boot-starter-http</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.vanrui.spring.starter</groupId>
+            <artifactId>vanrui-spring-boot-starter-mybatis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

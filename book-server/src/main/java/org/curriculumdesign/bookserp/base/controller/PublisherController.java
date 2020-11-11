@@ -41,8 +41,8 @@ public class PublisherController {
     }
 
     @ApiOperation("删除出版社")
-    @DeleteMapping("/delete")
-    public Integer save(Long id) {
+    @DeleteMapping("/{id}")
+    public Integer delete(@PathVariable Long id) {
         return publisherService.delete(id);
     }
 

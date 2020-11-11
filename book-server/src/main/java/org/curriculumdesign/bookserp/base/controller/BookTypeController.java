@@ -40,8 +40,8 @@ public class BookTypeController {
     }
 
     @ApiOperation("删除图书类型")
-    @DeleteMapping("/delete")
-    public Integer save(Long id) {
+    @DeleteMapping("/{id}")
+    public Integer delete(@PathVariable Long id) {
         return bookTypeService.delete(id);
     }
 

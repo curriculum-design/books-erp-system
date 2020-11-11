@@ -37,3 +37,15 @@ views.push({
     name: 'base-publisher',
     component: require('../views/base-publisher')
 })
+
+views.push({
+    path: '/base-supplier',
+    name: 'base-supplier',
+    component: require('../views/base-supplier')
+})
+
+views.push({
+    path: '/base-client',
+    name: 'base-client',
+    component: require('../views/base-client')
+})

@@ -1,0 +1,68 @@
+<template lang="pug">
+    ContentBody(title="<%= table%>")
+        template(slot="filter")
+            el-form(:inline="true", v-model="form" @submit.prevent.native="filter(form)")
+                <% Object.keys(fields).forEach(k => {%>el-form-item(label="<%= fields[k]%>")
+                    el-input(v-model="form.<%= k %>")
+                <% }) %>el-form-item
+                    el-button(type="primary", native-type="submit") 查询
+                    el-button(type="success" @click="handleEdit()" v-if="$p('<%= apiName%>:post')") 新增
+        el-table(:data="tableData" v-loading="loading" border)
+            el-table-column(:prop="key", :key="key", :label="value.label || value", v-for="value, key in headerMapping", :show-overflow-tooltip="true", :width="value.width")
+                ColumnContent(slot-scope="{row}" :columnDefine="value", :row="row", :value-key="key" :renderContent="value.render")
+            el-table-column(label="操作" min-width="120")
+                template(slot-scope="scope")
+                    .icon-btn.el-icon-edit-outline(@click="handleEdit(scope.row.<%= primaryKey %>)" v-if="$p('<%= apiName%>:put')")
+                    .icon-btn.el-icon-delete.danger(type="danger", @click="deleteConfirm(scope.row.<%= primaryKey %>)" v-if="$p('<%= apiName%>:delete')")
+        template(slot="footer")
+            el-pagination(:pageNum.sync="pageNum", :total="total", :pageSize="pageSize",@current-change="pageChangeHandler" @size-change="sizeChangeHandler" layout="total, sizes, prev, pager, next")
+        EditForm(:show.sync="editShow", v-model="editForm", @submit="submitHandler" v-loading.body="editLoading")
+</template>
+
+<script>
+import CurdTableMix from '@/utils/mixins/curd-table-mix.js'
+import {mapGetters} from 'vuex'
+import EditForm from './form'
+export default {
+    components: {EditForm},
+    mixins: [CurdTableMix('$<%= serviceNameFirstLower %>')],
+    data() {
+        return {
+            editForm: {<% Object.keys(fields).forEach(k => {%>
+                <%= k %>: '',<% }) %>
+            }
+        }
+    },
+    methods: {
+        submitHandler(val) {
+            this.submit(val, '<%= primaryKey %>').then(data => {
+                this.editShow = false
+                this.loadData()
+            })
+        }
+    },
+    computed: {
+        ...mapGetters['systemMapping'],
+        headerMapping() {
+            return {<% Object.keys(fields).forEach(k => {%>
+                <%= k %>: {
+                    label: '<%= fields[k]%>'
+                },<% }) %>
+            }
+        },
+        exportOptions() {
+            return {
+                headerMapping: this.headerMapping
+            }
+        },
+        importOptions() {
+            return {
+                headerMapping: {
+                }
+            }
+        }
+    },
+}
+</script>
+<style lang="less" rel="stylesheet/less">
+</style>

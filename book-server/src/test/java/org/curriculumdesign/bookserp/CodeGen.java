@@ -15,7 +15,7 @@ public class CodeGen {
 
     public static void main(String[] args) throws Exception {
         String userDir = System.getProperty("user.dir");
-        System.setProperty("user.dir", "C:\\cdteamproject\\books-erp-system\\book-server");
+        System.setProperty("user.dir", "/Users/slin/Desktop/curriculum-design/books-erp-system/book-server");
         CodeGenerator cg = buildSystemGenerate();
         cg.generate();
     }
@@ -24,13 +24,28 @@ public class CodeGen {
         return new CodeGenerator(new GeneratorConfig() {
             @Override
             public String tablePrefix() {
-                return "base";
+                return "sys";
             }
 
             @Override
             public String[] tableNames() {
                 return new String[]{
-                        "base_supplier",
+//                        "base_supplier",
+//                        "base_book",
+//                        "base_book_type",
+//                        "base_client",
+//                        "base_publisher",
+//                        "base_storage",
+//                        "base_supplier",
+//                        "erp_godown_entry",
+//                        "erp_godown_entry_item",
+//                        "erp_outbound",
+//                        "erp_outbound_item",
+//                        "erp_purchase",
+//                        "erp_purchase_item",
+//                        "erp_sales_order",
+//                        "erp_sales_order_item",
+                        "sys_admin"
                 };
             }
 
@@ -41,13 +56,13 @@ public class CodeGen {
 
             @Override
             public Map<String, Set<FileType>> recoveryTables() {
-//                return ImmutableMap.of();
-                return ImmutableMap.of("base_supplier", ImmutableSet.of(FileType.ENTITY, FileType.MAPPER, FileType.XML));
+                return ImmutableMap.of();
+//                return ImmutableMap.of("base_supplier", ImmutableSet.of(FileType.ENTITY, FileType.MAPPER, FileType.XML));
             }
 
             @Override
             public String parentPackage() {
-                return "org.curriculumdesign.bookserp.base";
+                return "org.curriculumdesign.bookserp.sys";
             }
 
             @Override

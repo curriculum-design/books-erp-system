@@ -1,5 +1,6 @@
-package org.curriculumdesign.bookserp.controller;
+package org.curriculumdesign.bookserp.sys.controller;
 
+import org.cdteam.spring.cloud.starter.context.base.BaseContext;
 import org.cdteam.spring.cloud.starter.context.base.RequestContext;
 import org.cdteam.spring.cloud.starter.context.bean.R;
 import org.cdteam.spring.cloud.starter.security.annotation.AnonymousAccess;
@@ -27,8 +28,8 @@ import java.util.stream.Collectors;
 @Slf4j
 @Api(value = "用户登录管理", tags = "[系统模块]用户登录管理")
 @RestController
-@RequestMapping
-public class LoginController extends BaseController {
+@RequestMapping("/v1/sys-admin")
+public class LoginController extends BaseContext {
 
     @Autowired
     private AuthenticationManagerBuilder authenticationManagerBuilder;

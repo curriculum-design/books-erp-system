@@ -1,10 +1,10 @@
-package org.curriculumdesign.bookserp.service.impl;
+package org.curriculumdesign.bookserp.sys.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.curriculumdesign.bookserp.domain.AdminEntity;
 import org.curriculumdesign.bookserp.dto.UserAccountDTO;
-import org.curriculumdesign.bookserp.mapper.AdminMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.curriculumdesign.bookserp.sys.domain.AdminEntity;
+import org.curriculumdesign.bookserp.sys.mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

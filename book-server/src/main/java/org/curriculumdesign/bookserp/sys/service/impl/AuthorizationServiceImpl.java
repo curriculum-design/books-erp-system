@@ -1,4 +1,4 @@
-package org.curriculumdesign.bookserp.service.impl;
+package org.curriculumdesign.bookserp.sys.service.impl;
 
 import org.cdteam.spring.cloud.starter.security.service.AuthorizationService;
 import org.springframework.stereotype.Service;

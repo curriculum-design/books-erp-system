@@ -1,10 +1,10 @@
-package com.vanrui.usop.main;
+package org.curriculumdesign.bookserp;
 
 import com.baomidou.mybatisplus.generator.config.rules.FileType;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.vanrui.spring.boot.starter.autocode.CodeGenerator;
-import com.vanrui.spring.boot.starter.autocode.config.GeneratorConfig;
+import org.cdteam.spring.cloud.starter.autocode.CodeGenerator;
+import org.cdteam.spring.cloud.starter.autocode.config.GeneratorConfig;
 
 import java.util.Map;
 import java.util.Set;
@@ -15,7 +15,7 @@ public class CodeGen {
 
     public static void main(String[] args) throws Exception {
         String userDir = System.getProperty("user.dir");
-        System.setProperty("user.dir", "C:\\vanruiproject\\books-erp-system\\book-server");
+        System.setProperty("user.dir", "C:\\cdteamproject\\books-erp-system\\book-server");
         CodeGenerator cg = buildSystemGenerate();
         cg.generate();
     }

@@ -1,6 +1,5 @@
 server.port: 18200
 
-
 logging:
   level.org.curriculumdesign.bookserp: DEBUG
 swagger.enable: true
@@ -8,7 +7,7 @@ mybatis-plus:
   mapper-locations: mybatis/**Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
-vanrui.web:
+cdteam.web:
   base-packages: org.curriculumdesign.bookserp  #  验证码
   verification-code:
     #  验证码类型配置 查看 VerificationCodeEnum 类

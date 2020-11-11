@@ -1,7 +1,7 @@
 package org.curriculumdesign.bookserp.base.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.vanrui.spring.boot.starter.common.utils.ListUtils;
+import org.cdteam.spring.cloud.starter.common.utils.ListUtils;
 import org.curriculumdesign.bookserp.base.domain.SupplierEntity;
 import org.curriculumdesign.bookserp.base.dto.SupplierDTO;
 import org.curriculumdesign.bookserp.base.mapper.SupplierMapper;

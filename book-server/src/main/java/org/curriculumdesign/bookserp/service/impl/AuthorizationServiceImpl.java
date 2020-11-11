@@ -1,6 +1,6 @@
 package org.curriculumdesign.bookserp.service.impl;
 
-import com.vanrui.spring.boot.starter.security.service.AuthorizationService;
+import org.cdteam.spring.cloud.starter.security.service.AuthorizationService;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;

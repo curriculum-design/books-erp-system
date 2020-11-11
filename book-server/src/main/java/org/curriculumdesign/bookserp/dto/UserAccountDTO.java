@@ -1,8 +1,8 @@
 package org.curriculumdesign.bookserp.dto;
 
 
-import com.vanrui.spring.boot.starter.security.base.UserAccount;
 import lombok.Data;
+import org.cdteam.spring.cloud.starter.security.base.UserAccount;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

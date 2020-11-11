@@ -1,7 +1,7 @@
 package org.curriculumdesign.bookserp.controller;
 
 
-import com.vanrui.spring.boot.starter.context.base.BaseContext;
+import org.cdteam.spring.cloud.starter.context.base.BaseContext;
 
 /**
  * @author lesl

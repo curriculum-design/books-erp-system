@@ -5,48 +5,56 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.vanrui</groupId>
-        <artifactId>vanrui-web-parent</artifactId>
+        <groupId>org.cdteam</groupId>
+        <artifactId>cdteam-cloud-starter</artifactId>
         <version>0.1.NEW</version>
     </parent>
     <artifactId>book-server</artifactId>
     <name>book-server</name>
     <url>http://maven.apache.org</url>
     <properties>
-        <mainClass>com.vanrui.demo.DemoServerLaunch</mainClass>
+        <mainClass>org.curriculumdesign.bookserp.BooksErpApplication</mainClass>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vanrui.spring.starter</groupId>
-            <artifactId>vanrui-spring-boot-starter-web</artifactId>
+            <!-- 已经包含了context, config, discovery, swagger, common的引入 -->
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-web</artifactId>
             <exclusions>
                 <exclusion>
-                    <groupId>com.vanrui.spring.starter</groupId>
-                    <artifactId>vanrui-spring-boot-starter-discovery</artifactId>
+                    <groupId>org.cdteam</groupId>
+                    <artifactId>cdteam-cloud-starter-config</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>com.vanrui.spring.starter</groupId>
-                    <artifactId>vanrui-spring-boot-starter-config</artifactId>
+                    <groupId>org.cdteam</groupId>
+                    <artifactId>cdteam-cloud-starter-discovery</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.vanrui.spring.starter</groupId>
-            <artifactId>vanrui-spring-boot-starter-security</artifactId>
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-security</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vanrui.spring.starter</groupId>
-            <artifactId>vanrui-spring-boot-starter-http</artifactId>
+            <!-- 已经包含了codegen的引入 -->
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-mybatis</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.vanrui.spring.starter</groupId>
-            <artifactId>vanrui-spring-boot-starter-mybatis</artifactId>
+            <!-- 已经包含了redis的引入 -->
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <!-- 已经包含了http的引入 -->
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-thirdapi</artifactId>
+        </dependency>
+        <dependency>
+            <!-- 已经包含了mq的引入 -->
+            <groupId>org.cdteam</groupId>
+            <artifactId>cdteam-cloud-starter-log</artifactId>
         </dependency>
     </dependencies>
 

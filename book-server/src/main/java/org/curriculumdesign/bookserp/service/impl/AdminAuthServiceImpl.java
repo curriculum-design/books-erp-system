@@ -6,7 +6,6 @@ import org.curriculumdesign.bookserp.dto.UserAccountDTO;
 import org.curriculumdesign.bookserp.mapper.AdminMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.CacheManager;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -1,6 +1,6 @@
 package org.curriculumdesign.bookserp.config;
 
-import com.vanrui.spring.boot.starter.security.token.TokenCacheProvider;
+import org.cdteam.spring.cloud.starter.security.token.TokenCacheProvider;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;

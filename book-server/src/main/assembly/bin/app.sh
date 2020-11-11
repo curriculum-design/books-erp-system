@@ -4,7 +4,7 @@ cd ..
 
 # custom config
 JVM_CONFIG_FILE="/wls/appsystems/jvm_config.txt"
-MAIN_CLASS=com.vanrui.cqip.main.CqipMainServerLaunch
+MAIN_CLASS=com.cdteam.cqip.main.CqipMainServerLaunch
 ROOT_CONFIG_FILE="bootstrap.properties"
 # default setting
 HEAP_SIZE="-Xms1g -Xmx1g"
@@ -32,7 +32,7 @@ if [ -n "$P2" ];
 		echo "use config $SPRING_ENV"
 fi
 
-JVM_PARAMS=`sed '/vanrui-cqip-main-server/!d;s/.*=//' $JVM_CONFIG_FILE | tr -d '\r'`
+JVM_PARAMS=`sed '/cdteam-cqip-main-server/!d;s/.*=//' $JVM_CONFIG_FILE | tr -d '\r'`
 JMX_PORT=`sed '/jmx.port/!d;s/.*=//' conf/$ROOT_CONFIG_FILE | tr -d '\r'`
 LIB_JARS=`ls $LIB_DIR|grep .jar|awk '{print "'$LIB_DIR'/"$0}'|tr "\n" ":"`
 export CLASSPATH=.:$CONF_DIR:$LIB_JARS

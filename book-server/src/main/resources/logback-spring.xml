@@ -51,7 +51,7 @@
     </appender>
 
 	<!-- 日志过滤 -->
-    <logger name="com.vanrui.cqip" level="INFO"/>
+    <logger name="org.curriculumdesign.bookserp" level="INFO"/>
 
 	<!-- 日志总开关 -->
     <root level="INFO">

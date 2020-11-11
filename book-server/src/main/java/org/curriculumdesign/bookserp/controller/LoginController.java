@@ -1,10 +1,10 @@
 package org.curriculumdesign.bookserp.controller;
 
+import org.cdteam.spring.cloud.starter.context.base.RequestContext;
+import org.cdteam.spring.cloud.starter.context.bean.R;
+import org.cdteam.spring.cloud.starter.security.annotation.AnonymousAccess;
+import org.cdteam.spring.cloud.starter.security.token.TokenProvider;
 import org.curriculumdesign.bookserp.dto.LoginDTO;
-import com.vanrui.spring.boot.starter.context.base.RequestContext;
-import com.vanrui.spring.boot.starter.context.bean.R;
-import com.vanrui.spring.boot.starter.security.annotation.AnonymousAccess;
-import com.vanrui.spring.boot.starter.security.token.TokenProvider;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

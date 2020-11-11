@@ -4,7 +4,7 @@ cd ..
 
 # custom config
 JVM_CONFIG_FILE="/wls/appsystems/jvm_config.txt"
-MAIN_CLASS=com.cdteam.cqip.main.CqipMainServerLaunch
+MAIN_CLASS=org.curriculumdesign.bookserp.BooksErpApplication
 ROOT_CONFIG_FILE="bootstrap.properties"
 # default setting
 HEAP_SIZE="-Xms1g -Xmx1g"

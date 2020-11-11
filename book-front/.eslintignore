@@ -1,0 +1,8 @@
+build/*.js
+config/*.js
+src/assets/*/*.js
+src/utils/flexible.js
+src/utils/constans/*.js
+src/utils/third-part/*
+src/components/wang-editor/js/*
+static/*

@@ -1,0 +1,42 @@
+stages:
+    - build_pro
+    - huide_pro1
+    - huide_pro2
+
+variables:
+    GIT_STRATEGY: none
+    SERVICE_PORT: 5000/actuator
+
+build_pro:
+    stage: build_pro
+    script:
+        - CMD="sh /home/huide/config/server-scripts/pmr2.sh -n admin-front -l /home/huide/code/ -s git@gitlab.com:medical-instrument/ -b test -e npm"
+        - echo "exec $CMD"
+        - eval "$CMD"
+    tags:
+        - 'huide_test1'
+    only:
+        - test
+
+huide_pro1:
+    stage: huide_pro1
+    script:
+    - CMD="sh /home/huide/config/server-scripts/pmr2.sh -n admin-front -l /home/huide/code/ -s git@gitlab.com:medical-instrument/ -b master -e npm"
+    - echo "exec $CMD"
+    - eval "$CMD"
+    tags:
+    - 'huide_pro1'
+    only:
+    - master
+
+
+huide_pro2:
+    stage: huide_pro2
+    script:
+    - CMD="sh /home/huide/config/server-scripts/pmr2.sh -n admin-front -l /home/huide/code/ -s git@gitlab.com:medical-instrument/ -b master -e npm"
+    - echo "exec $CMD"
+    - eval "$CMD"
+    tags:
+    - 'huide_pro2'
+    only:
+    - master

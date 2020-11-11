@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class ClientDTO {
+public class StorageDTO {
 
     /**
      * ID
@@ -39,17 +39,8 @@ public class ClientDTO {
     private Boolean isDel;
 
     /**
-     * 客户名称
+     * 仓库名称
      */
     private String name;
 
-    /**
-     * 联系人名称
-     */
-    private String contactName;
-
-    /**
-     * 联系人手机号
-     */
-    private String contactMobile;
 }

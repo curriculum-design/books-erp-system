@@ -1,7 +1,0 @@
-import BaseService from './BaseService'
-class @{modelName}Service extends BaseService {
-    constructor() {
-        super('@{modelNameLine}')
-    }
-}
-export default new @{modelName}Service()

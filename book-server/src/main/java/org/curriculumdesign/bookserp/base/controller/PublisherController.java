@@ -46,7 +46,7 @@ public class PublisherController {
         return publisherService.delete(id);
     }
 
-    @ApiOperation("获取出版社列表")
+    @ApiOperation("获取所有出版社")
     @GetMapping("/all")
     public List<PublisherDTO> list() {
         return publisherService.list();

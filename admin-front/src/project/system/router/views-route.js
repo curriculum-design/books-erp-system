@@ -49,3 +49,9 @@ views.push({
     name: 'base-client',
     component: require('../views/base-client')
 })
+
+views.push({
+    path: '/base-storage',
+    name: 'base-storage',
+    component: require('../views/base-storage')
+})

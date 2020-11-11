@@ -1,6 +1,6 @@
 <template lang="pug">
 el-dialog(title="编辑", :visible.sync="dialogShow", :close-on-click-modal="false", :append-to-body="true")
-    el-form(v-model="form" @submit.prevent.native="submitHandler()" label-width="80px")
+    el-form(v-model="form" @submit.prevent.native="submitHandler()" label-width="110px")
         el-form-item(label="供应商名称")
             el-input(v-model="form.name")
         el-form-item(label="供应商编号")

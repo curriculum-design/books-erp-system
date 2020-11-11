@@ -22,3 +22,4 @@ Vue.prototype.$baseBookTypeService = require('./BaseBookTypeService.js').default
 Vue.prototype.$basePublisherService = require('./BasePublisherService.js').default
 Vue.prototype.$baseSupplierService = require('./BaseSupplierService.js').default
 Vue.prototype.$baseClientService = require('./BaseClientService.js').default
+Vue.prototype.$baseStorageService = require('./BaseStorageService.js').default

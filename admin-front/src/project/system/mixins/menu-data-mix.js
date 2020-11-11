@@ -76,6 +76,10 @@ export default {
                 'id': '5',
                 'menuName': '客户管理',
                 'url': 'base-client',
+            }, {
+                'id': '6',
+                'menuName': '仓库管理',
+                'url': 'base-storage',
             }]
         },
     },
